@@ -1,0 +1,12 @@
+@mixin frame()
+    display: grid
+    grid-template-rows: 8rem 1fr
+    grid-row-gap: 3rem
+    max-width: 70rem
+    width: 90%
+
+.container
+    @include grid()
+
+    &-width
+        @include frame()

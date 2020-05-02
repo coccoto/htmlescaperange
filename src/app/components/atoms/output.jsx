@@ -1,6 +1,8 @@
 import React from 'react'
 // hooks
 import useEscape from '@/app/hooks/useEscape'
+// styles
+import styles from '@/app/styles/components/atoms/input/textarea.module.sass'
 
 export default (props) => {
 
@@ -15,6 +17,9 @@ export default (props) => {
     }, [props.subject, props.scope])
 
     return (
-        <textarea defaultValue={value}></textarea>
+        <textarea
+            className={styles['textarea']}
+            defaultValue={value}
+        ></textarea>
     )
 }

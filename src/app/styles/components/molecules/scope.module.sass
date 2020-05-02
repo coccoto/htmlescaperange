@@ -1,0 +1,21 @@
+@mixin frame()
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 2rem
+    width: 90%
+
+@mixin background($color)
+    background-color: map-get($colors, $color)
+    border: 1px solid map-get($colors, border)
+
+.container
+    @include grid()
+    @include background(blue)
+    width: 100%
+
+    &-width
+        @include frame()
+
+.label
+    padding: 0.1rem
+    font-size: 1.25rem

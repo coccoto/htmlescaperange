@@ -1,0 +1,24 @@
+.container
+    width: 100%
+
+    @include media()
+        display: grid
+        grid-template: repeat(3, 1fr) / 1fr 6rem 1fr
+        grid-column-gap: 2rem
+
+    &-1
+        grid-row: 1 / 4
+
+    &-2
+        @include grid()
+        grid-row: 2 / 3
+
+    &-3
+        grid-row: 1 / 4
+
+.label
+    padding: 0.25rem 0.5rem
+    border-left: 0.5rem solid map-get($colors, border)
+    border-top: 1px solid map-get($colors, border)
+    border-right: 1px solid map-get($colors, border)
+    font-size: 1.5rem

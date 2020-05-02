@@ -2,6 +2,8 @@ import React from 'react'
 // molecules
 import Main from '@/app/components/molecules/main'
 import Scope from '@/app/components/molecules/scope'
+// styles
+import styles from '@/app/styles/components/molecules/home.module.sass'
 
 export default () => {
 
@@ -15,16 +17,18 @@ export default () => {
     }
 
     return (
-        <div>
-            <Scope
-                ref={scopeRef}
-                setOpen={(i) => {setOpen(i)}}
-                setClose={(i) => {setClose(i)}}
-            ></Scope>
-            <Main
-                scope={{open: open, close: close}}
-                handleSubmit={() => {handleSubmit()}}
-            ></Main>
+        <div className={styles['container']}>
+            <div className={styles['container-width']}>
+                <Scope
+                    ref={scopeRef}
+                    setOpen={(i) => {setOpen(i)}}
+                    setClose={(i) => {setClose(i)}}
+                ></Scope>
+                <Main
+                    scope={{open: open, close: close}}
+                    handleSubmit={() => {handleSubmit()}}
+                ></Main>
+            </div>
         </div>
     )
 }

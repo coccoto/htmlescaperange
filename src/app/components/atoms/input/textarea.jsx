@@ -1,4 +1,6 @@
 import React from 'react'
+// styles
+import styles from '@/app/styles/components/atoms/input/textarea.module.sass'
 
 export default React.forwardRef((props, ref) => {
 
@@ -11,6 +13,9 @@ export default React.forwardRef((props, ref) => {
     const [subject, setSubject] = React.useState('')
 
     return (
-        <textarea onChange={(event) => {setSubject(event.target.value)}}></textarea>
+        <textarea
+            className={styles['textarea']}
+            onChange={(event) => {setSubject(event.target.value)}}
+        ></textarea>
     )
 })

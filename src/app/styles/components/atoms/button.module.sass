@@ -1,0 +1,10 @@
+@mixin whole()
+    height: 3rem
+    font-size: 1.25rem
+
+.button
+    @include whole()
+    margin: 2rem 0
+
+    @include media
+        margin: 0
