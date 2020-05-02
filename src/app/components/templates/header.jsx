@@ -6,7 +6,9 @@ export default () => {
 
     return (
         <header className={styles['container']}>
-            <h1>HTML EscapeRange</h1>
+            <h1
+                className={styles['headline']}
+            >HTML EscapeRange</h1>
         </header>
     )
 }

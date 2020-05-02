@@ -6,6 +6,8 @@ import styles from '@/app/styles/components/atoms/input/textarea.module.sass'
 
 export default (props) => {
 
+    const textareaRef = React.useRef()
+
     const [value, setValue] = React.useState('')
 
     React.useEffect(() => {
@@ -16,10 +18,17 @@ export default (props) => {
         }
     }, [props.subject, props.range])
 
+    const handleSubmit = () => {
+        textareaRef.current.select()
+        document.execCommand('copy');
+    }
+
     return (
         <textarea
+            ref={textareaRef}
             className={styles['textarea']}
             defaultValue={value}
+            onClick={() => {handleSubmit()}}
         ></textarea>
     )
 }

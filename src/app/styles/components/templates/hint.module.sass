@@ -15,6 +15,7 @@
 .headline
     @include border()
     padding: 1rem 1.5rem
+    color: map-get($colors, green)
     font-size: 1.5rem
 
 .sentence 
@@ -23,3 +24,6 @@
     & > p
         padding: 1rem 1.25rem
         padding-top: 0
+
+        & > span
+            color: map-get($colors, green)
