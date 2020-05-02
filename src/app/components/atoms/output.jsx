@@ -9,12 +9,12 @@ export default (props) => {
     const [value, setValue] = React.useState('')
 
     React.useEffect(() => {
-        const scope = props.scope
+        const range = props.range
 
-        if (scope.open !== '' && scope.close !== '' && props.subject !== '') {
-            setValue(useEscape(props.subject, props.scope))
+        if (range.open !== '' && range.close !== '' && props.subject !== '') {
+            setValue(useEscape(props.subject, props.range))
         }
-    }, [props.subject, props.scope])
+    }, [props.subject, props.range])
 
     return (
         <textarea

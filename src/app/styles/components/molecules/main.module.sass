@@ -1,3 +1,7 @@
+@mixin border()
+    border: 1px solid map-get($colors, border)
+    border-bottom: none
+
 .container
     width: 100%
 
@@ -17,8 +21,6 @@
         grid-row: 1 / 4
 
 .label
-    padding: 0.25rem 0.5rem
-    border-left: 0.5rem solid map-get($colors, border)
-    border-top: 1px solid map-get($colors, border)
-    border-right: 1px solid map-get($colors, border)
+    @include border()
+    padding: 0.5rem 1rem
     font-size: 1.5rem

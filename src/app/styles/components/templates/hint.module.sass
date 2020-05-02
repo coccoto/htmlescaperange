@@ -1,0 +1,25 @@
+@mixin wrapper()
+    border: 1px solid map-get($colors, border)
+
+@mixin border()
+    border-bottom: 1px solid map-get($colors, border)
+
+.container
+    @include grid()
+
+    &-width
+        @include wrapper()
+        max-width: 70rem
+        width: 90%
+
+.headline
+    @include border()
+    padding: 1rem 1.5rem
+    font-size: 1.5rem
+
+.sentence 
+    padding-top: 1rem
+
+    & > p
+        padding: 1rem 1.25rem
+        padding-top: 0

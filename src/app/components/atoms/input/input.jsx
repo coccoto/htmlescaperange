@@ -4,15 +4,15 @@ export default React.forwardRef((props, ref) => {
 
     React.useImperativeHandle(ref, () => ({
         handleSubmit: () => {
-            props.setScope(scope)
+            props.setRange(range)
         }
     }))
 
-    const [scope, setScope] = React.useState('')
+    const [range, setRange] = React.useState('')
 
     return (
         <input
-            onChange={(event) => {setScope(event.target.value)}}
+            onChange={(event) => {setRange(event.target.value)}}
         ></input>
     )
 })

@@ -1,8 +1,10 @@
 import React from 'react'
-// molecules
-import Header from '@/app/components/molecules/header'
-import Home from '@/app/components/molecules/home'
-import Footer from '@/app/components/molecules/footer'
+// organisms
+import Home from '@/app/components/organisms/home'
+// templates
+import Header from '@/app/components/templates/header'
+import Hint from '@/app/components/templates/hint'
+import Footer from '@/app/components/templates/footer'
 // styles
 import styles from '@/app/styles/index.module.sass'
 
@@ -12,6 +14,7 @@ export default () => {
         <div className={styles['container']}>
             <Header></Header>
             <Home></Home>
+            <Hint></Hint>
             <Footer></Footer>
         </div>
     )

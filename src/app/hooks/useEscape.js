@@ -1,11 +1,11 @@
 /**
  * @param {string} subject
- * @param {string} scope
+ * @param {string} range
  * @return {string}
  */
-export default (subject, scope) => {
+export default (subject, range) => {
 
-    return slice(subject, scope.open, scope.close)
+    return slice(subject, range.open, range.close)
 }
 
 /**

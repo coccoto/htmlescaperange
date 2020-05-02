@@ -36,7 +36,7 @@ export default (props) => {
                 <p className={styles['label']}>Result</p>
                 <Output
                     subject={subject}
-                    scope={props.scope}
+                    range={props.range}
                 ></Output>
             </div>
         </div>

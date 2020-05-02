@@ -2,7 +2,7 @@ import React from 'react'
 // atoms
 import Input from '@/app/components/atoms/input/input'
 // styles
-import styles from '@/app/styles/components/molecules/scope.module.sass'
+import styles from '@/app/styles/components/molecules/range.module.sass'
 
 export default React.forwardRef((props, ref) => {
 
@@ -23,14 +23,14 @@ export default React.forwardRef((props, ref) => {
                     <p className={styles['label']}>From</p>
                     <Input
                         ref={openRef}
-                        setScope={props.setOpen}
+                        setRange={props.setOpen}
                     ></Input>
                 </div>
                 <div>
                     <p className={styles['label']}>To</p>
                     <Input
                         ref={closeRef}
-                        setScope={props.setClose}
+                        setRange={props.setClose}
                     ></Input>
                 </div>
             </div>

@@ -1,16 +1,19 @@
 @mixin frame()
     display: grid
     grid-template-columns: 1fr 1fr
-    grid-column-gap: 2rem
-    width: 90%
+    grid-column-gap: 1rem
+    width: 95%
 
-@mixin background($color)
+    @include media
+        grid-column-gap: 2rem
+
+@mixin wrapper($color)
     background-color: map-get($colors, $color)
     border: 1px solid map-get($colors, border)
 
 .container
     @include grid()
-    @include background(blue)
+    @include wrapper(blue)
     width: 100%
 
     &-width

@@ -1,31 +1,31 @@
 import React from 'react'
 // molecules
 import Main from '@/app/components/molecules/main'
-import Scope from '@/app/components/molecules/scope'
+import Range from '@/app/components/molecules/range'
 // styles
-import styles from '@/app/styles/components/molecules/home.module.sass'
+import styles from '@/app/styles/components/organisms/home.module.sass'
 
 export default () => {
 
-    const scopeRef = React.useRef()
+    const rangeRef = React.useRef()
 
     const [open, setOpen] = React.useState('')
     const [close, setClose] = React.useState('')
 
     const handleSubmit = () => {
-        scopeRef.current.handleSubmit()
+        rangeRef.current.handleSubmit()
     }
 
     return (
         <div className={styles['container']}>
             <div className={styles['container-width']}>
-                <Scope
-                    ref={scopeRef}
+                <Range
+                    ref={rangeRef}
                     setOpen={(i) => {setOpen(i)}}
                     setClose={(i) => {setClose(i)}}
-                ></Scope>
+                ></Range>
                 <Main
-                    scope={{open: open, close: close}}
+                    range={{open: open, close: close}}
                     handleSubmit={() => {handleSubmit()}}
                 ></Main>
             </div>
