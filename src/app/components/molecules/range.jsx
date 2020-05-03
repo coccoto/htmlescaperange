@@ -24,6 +24,7 @@ export default React.forwardRef((props, ref) => {
                     <Input
                         ref={openRef}
                         setRange={props.setOpen}
+                        placeholder={'<pre>'}
                     ></Input>
                 </div>
                 <div>
@@ -31,6 +32,7 @@ export default React.forwardRef((props, ref) => {
                     <Input
                         ref={closeRef}
                         setRange={props.setClose}
+                        placeholder={'</pre>'}
                     ></Input>
                 </div>
             </div>

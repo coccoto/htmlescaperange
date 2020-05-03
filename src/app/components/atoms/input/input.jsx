@@ -16,6 +16,7 @@ export default React.forwardRef((props, ref) => {
         <input
             className={styles['input']}
             onChange={(event) => {setRange(event.target.value)}}
+            placeholder={props.placeholder}
         ></input>
     )
 })

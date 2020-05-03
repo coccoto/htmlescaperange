@@ -13,14 +13,25 @@ export default (props) => {
     React.useEffect(() => {
         const range = props.range
 
-        if (range.open !== '' && range.close !== '' && props.subject !== '') {
+        if (props.subject !== '') {
+
+            if (range.open === '') {
+                range.open = '<pre>'
+            }
+
+            if (range.close === '') {
+                range.close = '</pre>'
+            }
             setValue(useEscape(props.subject, props.range))
         }
     }, [props.subject, props.range])
 
     const handleSubmit = () => {
-        textareaRef.current.select()
-        document.execCommand('copy');
+        if (textareaRef.current.value !== '') {
+            textareaRef.current.select()
+            document.execCommand('copy')
+            alert('クリップボードにコピーしました。')
+        }
     }
 
     return (
