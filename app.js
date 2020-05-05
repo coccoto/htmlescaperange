@@ -5,16 +5,16 @@ const path = require('path')
 
 const app = express()
 
-// Views Setup
+// views setup
 app.set('views', path.resolve(__dirname, 'views'))
 app.set('view engine', 'pug')
 
-// Static Setup
+// static setup
 app.use(express.static(path.resolve(__dirname, 'dist')))
 
 // React
-app.get('*', (request, response) => {
-    response.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'dist', 'index.html'))
 })
 
 app.listen(3000, () => {
